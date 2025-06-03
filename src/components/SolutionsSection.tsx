@@ -6,22 +6,22 @@ const solutions: Solution[] = [
   {
     title: "Public Transit Systems",
     description: "Enhance passenger safety and operational efficiency with comprehensive surveillance systems designed specifically for buses, trains, and other public transportation vehicles.",
-    imageUrl: "/img/bus.jpg"
+    imageUrl: "img/bus.jpg"
   },
   {
     title: "Commercial Fleet Management",
     description: "Monitor driver behavior, ensure cargo security, and document deliveries with our advanced Mobile DVR solutions tailored for logistics and delivery companies.",
-    imageUrl: "/img/amila.jpg"
+    imageUrl: "img/amila.jpg"
   },
   {
     title: "Emergency Services",
     description: "Support police operations with reliable evidence collection, real-time monitoring, and secure storage solutions that meet strict chain-of-custody requirements.",
-     imageUrl: "/img/o2.jpg"
+     imageUrl: "img/o2.jpg"
   },
   {
     title: "School Transportation",
     description: "Ensure student safety with specialized Mobile DVR systems that provide clear monitoring of both interior and exterior environments for school buses.",
-    imageUrl: "/img/school_bus.jpg"
+    imageUrl: "img/school_bus.jpg"
   }
 ];
 

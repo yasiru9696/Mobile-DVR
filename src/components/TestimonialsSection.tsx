@@ -25,11 +25,11 @@ const Counter: React.FC<{ end: number; label: string }> = ({ end, label }) => {
       <p className="text-sm text-white-600">{label}</p>
       </div>
   );
-};
+};//className="text-center mb-16"
 
 const InsightsSection: React.FC = () => {
   return (
-    <section id="Insights" className="text-center mb-16">
+    <section id="Insights" className="section relative text-center mb-16">
       <h1 className="text-5xl mb-4">Our<span className="gradient-text"> Insights</span></h1>
       <p className="text-lg mb-6 text-white-600">From Global Ambitions to Industry Success: Our Impact in Numbers</p>
       <p className="text-md mb-6 text-white-500">Sri Lanka | Cambodia | Thailand</p>
@@ -66,8 +66,8 @@ const testimonials = [
 
 const TestimonialsSection: React.FC = () => {
   return (
-    <section className="section bg-dark-900 relative">
-      <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-dark-950 to-transparent"></div>
+    <div className="bg-dark-900 relative">
+      
       <div className="container-custom">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="mb-4">Client <span className="gradient-text">Testimonials</span></h2>
@@ -97,7 +97,7 @@ const TestimonialsSection: React.FC = () => {
           ))}
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

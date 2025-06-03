@@ -7,7 +7,6 @@ import {
   Shield, 
   Eye, 
   MapPin, 
-  LineChart, 
   Monitor
 } from 'lucide-react';
 import { Feature } from '../types';
