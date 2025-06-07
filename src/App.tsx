@@ -3,6 +3,7 @@ import ParticleBackground from './components/ParticleBackground';
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import FeaturesSection from './components/FeaturesSection';
+import BenefitsSection from './components/BenefitsSection';
 import SolutionsSection from './components/SolutionsSection';
 import TestimonialsSection from './components/TestimonialsSection';
 import ContactSection from './components/ContactSection';
@@ -18,6 +19,7 @@ function App() {
           <HeroSection />
           <SolutionsSection />
           <FeaturesSection />
+          <BenefitsSection />
           <TestimonialsSection />
           <ContactSection />
         </main>
