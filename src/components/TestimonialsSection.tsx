@@ -1,36 +1,58 @@
 import React from 'react';
 
-const Counter: React.FC<{ end: number; label: string }> = ({ end, label }) => {
+interface CounterProps {
+  end: number;
+  label: string;
+}
+
+const Counter: React.FC<CounterProps> = ({ end, label }) => {
   const [count, setCount] = React.useState(0);
+  const ref = React.useRef(null);
 
   React.useEffect(() => {
-    let start = 0;
-    const duration = 2000; // Animation duration in ms
-    const increment = end / (duration / 16); // Approx 60fps
-    const timer = setInterval(() => {
-      start += increment;
-      if (start >= end) {
-        setCount(end);
-        clearInterval(timer);
-      } else {
-        setCount(Math.ceil(start));
-      }
-    }, 16);
-    return () => clearInterval(timer);
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          let start = 0;
+          const duration = 2000; // Animation duration in ms
+          const increment = end / (duration / 16); // Approx 60fps
+          const timer = setInterval(() => {
+            start += increment;
+            if (start >= end) {
+              setCount(end);
+              clearInterval(timer);
+            } else {
+              setCount(Math.ceil(start));
+            }
+          }, 16);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 } 
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      observer.disconnect();
+    };
   }, [end]);
 
-  return ( 
-      <div className="text-center">
-      <p className="text-5xl font-bold gradient-text">{count}+</p>
+  return (
+    <div ref={ref} className="text-center">
+      <p className="text-5xl font-bold text-primary-500">{count}+</p>
       <p className="text-sm text-white-600">{label}</p>
-      </div>
+    </div>
   );
-};//className="text-center mb-16"
+};
 
 const InsightsSection: React.FC = () => {
   return (
+    
     <section id="Insights" className="section relative text-center mb-16">
-      <h1 className="text-5xl mb-4">Our<span className="gradient-text"> Insights</span></h1>
+      <h1 className="text-5xl mb-4">Our<span className="text-primary-500"> Insights</span></h1>
       <p className="text-lg mb-6 text-white-600">From Global Ambitions to Industry Success: Our Impact in Numbers</p>
       <p className="text-md mb-6 text-white-500">Sri Lanka | Cambodia | Thailand</p>
       <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -67,10 +89,9 @@ const testimonials = [
 const TestimonialsSection: React.FC = () => {
   return (
     <div className="bg-dark-900 relative">
-      
       <div className="container-custom">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="mb-4">Client <span className="gradient-text">Testimonials</span></h2>
+          <h2 className="mb-4">Client <span className="text-primary-500">Testimonials</span></h2>
           <p className="text-gray-300 text-lg">
             Hear from organizations that have transformed their operations with our Mobile DVR solutions.
           </p>

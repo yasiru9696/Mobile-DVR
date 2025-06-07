@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { NavItem } from '../types';
+import geoidImg from '/img/geoid.png';
 
 const navItems: NavItem[] = [
   { name: 'Home', href: '#home' },
@@ -37,8 +38,8 @@ const Navbar: React.FC = () => {
     >
       <div className="container-custom flex items-center justify-between py-4">
         <a href="#" className="flex items-center gap-2">
-          <div className="h-10 w-20 rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 flex items-center justify-center">
-            <span> <link rel="logo" type="image/svg+xml" href="\lens.png" /></span>
+          <div className="h-10 w-10 rounded-full bg-gradient-to-br primary-500 flex items-center justify-center">
+            <img src={geoidImg} alt="Geoid Logo" className="h-10 w-auto" />
           </div>
           <span className="text-white font-semibold text-4xl">MobileDVR</span>
           <span className="text-gray-300 font-rajdhani font-bold text-4xl">.lk</span>

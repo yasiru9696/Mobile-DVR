@@ -115,7 +115,7 @@
 }
 
 .feature-icon-container {
-  @apply relative w-16 h-16 flex items-center justify-center rounded-full;
+  @apply relative w-6 h-6 flex items-center justify-center rounded-full;
 }
 
 .feature-icon-container::before {
@@ -124,5 +124,5 @@
 }
 
 .feature-icon-container svg {
-  @apply relative z-10;
+  @apply relative z-20;
 }

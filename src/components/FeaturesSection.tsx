@@ -71,11 +71,11 @@ const getIcon = (iconName: string, className: string = "h-8 w-8 text-white") => 
 const FeaturesSection: React.FC = () => {
   return (
     <section id="features" className="section bg-dark-900 relative">
-      <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-dark-950 to-transparent"></div>
+      <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-dark-900 to-transparent"></div>
       <div className="container-custom">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="mb-4">Powerful <span className="gradient-text">Features</span></h2>
-          <p className="text-gray-300 text-lg">
+          <h2 className="mb-4">Powerful <span className="text-primary-500">Features</span></h2>
+          <p className="text-White-300 text-lg">
             Our Mobile DVR systems come equipped with industry-leading capabilities designed to meet the demanding needs of modern fleets.
           </p>
         </div>
@@ -86,11 +86,11 @@ const FeaturesSection: React.FC = () => {
               key={index} 
               className="card group hover:bg-gradient-to-b hover:from-dark-800 hover:to-dark-900/80"
             >
-              <div className="feature-icon-container mb-4 group-hover:from-primary-400/40 group-hover:to-secondary-400/40">
+              <div className="mb-8 group-hover:from-primary-400/4 group-hover:to-secondary-400/40">
                 {getIcon(feature.icon)}
               </div>
               <h3 className="text-xl font-medium mb-2">{feature.title}</h3>
-              <p className="text-gray-400 group-hover:text-gray-300">{feature.description}</p>
+              <p className="text-gray-400 group-hover:text-gray-100">{feature.description}</p>
             </div>
           ))}
         </div>

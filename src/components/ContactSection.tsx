@@ -49,15 +49,15 @@ const ContactSection: React.FC = () => {
       <div className="container-custom">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="mb-4">Get in <span className="gradient-text">Touch</span></h2>
+            <h2 className="mb-4">Get in <span className="text-primary-500">Touch</span></h2>
             <p className="text-gray-300 text-lg mb-8">
               Ready to enhance your fleet security? Contact us today for a personalized consultation and demonstration.
             </p>
 
             <div className="space-y-6 mb-8">
               <div className="flex items-start">
-                <div className="mr-4 mt-1 feature-icon-container w-10 h-10">
-                  <Phone className="h-5 w-5 text-white" />
+                <div className="mr-6 mt-1 feature-icon-container w-5 h-5">
+                  <Phone className="h-6 w-6 text-white" />
                 </div>
                 <div>
                   <h3 className="text-lg font-medium mb-1">Call Us</h3>
@@ -67,7 +67,7 @@ const ContactSection: React.FC = () => {
 
               <div className="flex items-start">
                 <div className="mr-4 mt-1 feature-icon-container w-10 h-10">
-                  <Mail className="h-5 w-5 text-white" />
+                  <Mail className="h-6 w-6 text-white" />
                 </div>
                 <div>
                   <h3 className="text-lg font-medium mb-1">Email</h3>
@@ -77,7 +77,7 @@ const ContactSection: React.FC = () => {
 
               <div className="flex items-start">
                 <div className="mr-4 mt-1 feature-icon-container w-10 h-10">
-                  <MapPin className="h-5 w-5 text-white" />
+                  <MapPin className="h-6 w-6 text-white" />
                 </div>
                 <div>
                   <h3 className="text-lg font-medium mb-1">Headquarters</h3>

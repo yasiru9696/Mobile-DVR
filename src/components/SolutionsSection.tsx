@@ -1,27 +1,31 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import { Solution } from '../types';
+import busImg from '/img/Bus.png';
+import amilaImg from '/img/Truck.png';
+import o2Img from '/img/Gas.png';
+import schoolBusImg from '/img/School.png';
 
 const solutions: Solution[] = [
   {
     title: "Public Transit Systems",
     description: "Enhance passenger safety and operational efficiency with comprehensive surveillance systems designed specifically for buses, trains, and other public transportation vehicles.",
-    imageUrl: "img/bus.jpg"
+    imageUrl: busImg
   },
   {
     title: "Commercial Fleet Management",
     description: "Monitor driver behavior, ensure cargo security, and document deliveries with our advanced Mobile DVR solutions tailored for logistics and delivery companies.",
-    imageUrl: "img/amila.jpg"
+    imageUrl: amilaImg
   },
   {
     title: "Emergency Services",
     description: "Support police operations with reliable evidence collection, real-time monitoring, and secure storage solutions that meet strict chain-of-custody requirements.",
-     imageUrl: "img/o2.jpg"
+     imageUrl: o2Img
   },
   {
     title: "School Transportation",
     description: "Ensure student safety with specialized Mobile DVR systems that provide clear monitoring of both interior and exterior environments for school buses.",
-    imageUrl: "img/school_bus.jpg"
+    imageUrl: schoolBusImg
   }
 ];
 
@@ -31,7 +35,7 @@ const SolutionsSection: React.FC = () => {
       <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-dark-900 to-transparent"></div>
       <div className="container-custom">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="mb-4">Tailored <span className="gradient-text">Solutions</span></h2>
+          <h2 className="mb-4">Tailored <span className="text-primary-500">Solutions</span></h2>
           <p className="text-gray-300 text-lg">
             Our Mobile DVR systems are customized for specific industry needs, providing targeted security and operational benefits.
           </p>

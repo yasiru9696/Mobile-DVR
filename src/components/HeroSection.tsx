@@ -7,10 +7,10 @@ const HeroSection: React.FC = () => {
       <div className="container-custom pt-24 pb-16">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="animate-fade-in">
-            <h1 className="mb-6">
-              Advanced <span className="gradient-text">Mobile DVR</span> Solutions for Modern Fleet Security
+            <h1 className="mb-5">
+              Advanced <span className="text-primary-500">Mobile DVR</span> Solutions for Modern Fleet Security
             </h1>
-            <p className="text-lg mb-8 text-gray-300 max-w-xl">
+            <p className="text-lg mb-8 text-white-300 max-w-xl">
               Comprehensive video surveillance and recording systems designed specifically for vehicles. Protect your assets, ensure driver safety, and maintain operational visibility.
             </p>
             <div className="flex flex-wrap gap-4">
@@ -25,15 +25,15 @@ const HeroSection: React.FC = () => {
             <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-6">
               <div className="flex items-center gap-3">
                 <Shield className="text-primary-400" size={24} />
-                <span className="text-gray-300">Enhanced Security</span>
+                <span className="text-white-300">Enhanced Security</span>
               </div>
               <div className="flex items-center gap-3">
                 <Truck className="text-secondary-400" size={24} />
-                <span className="text-gray-300">Fleet Management</span>
+                <span className="text-white-300">Fleet Management</span>
               </div>
               <div className="flex items-center gap-3">
                 <Database className="text-accent-400" size={24} />
-                <span className="text-gray-300">Cloud Storage</span>
+                <span className="text-white-300">Cloud Storage</span>
               </div>
             </div>
           </div>
@@ -50,7 +50,7 @@ const HeroSection: React.FC = () => {
               className="w-full h-full object-cover"
             ></iframe>
 
-              <div className="absolute inset-0 bg-gradient-to-t from-dark-950/70 to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-dark-900/70 to-transparent"></div>
               <div className="absolute bottom-6 left-6 right-6">
                 <span className="px-3 py-1 bg-primary-500 text-white text-sm rounded-full inline-block mb-2">
                   Advanced AI Technology
@@ -65,29 +65,6 @@ const HeroSection: React.FC = () => {
             <div className="absolute -top-8 -right-8 w-32 h-32 bg-gradient-radial from-primary-400/20 to-transparent rounded-full blur-xl"></div>
             <div className="absolute -bottom-8 -left-8 w-32 h-32 bg-gradient-radial from-secondary-400/20 to-transparent rounded-full blur-xl"></div>
           </div>
-
-          {/*<div className="relative animate-fade-in">
-            <div className="aspect-[4/3] rounded-xl overflow-hidden border border-dark-800 shadow-2xl">
-              <img 
-                src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
-                alt="Mobile DVR System" 
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-dark-950/70 to-transparent"></div>
-              <div className="absolute bottom-6 left-6 right-6">
-                <span className="px-3 py-1 bg-primary-500 text-white text-sm rounded-full inline-block mb-2">
-                  Next-Gen Technology
-                </span>
-                <h3 className="text-white text-xl font-medium">
-                  1920P UHD, Ultra-wide 170° Recording with AI-Enhanced Analytics
-                </h3>
-              </div>
-            </div>
-
-            
-            <div className="absolute -top-8 -right-8 w-32 h-32 bg-gradient-radial from-primary-400/20 to-transparent rounded-full blur-xl"></div>
-            <div className="absolute -bottom-8 -left-8 w-32 h-32 bg-gradient-radial from-secondary-400/20 to-transparent rounded-full blur-xl"></div>
-          </div>*/}
         </div>
       </div>
     </section>
