@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 export interface NavItem {
   name: string;
   href: string;
@@ -17,6 +19,7 @@ export interface Testimonial {
 }
 
 export interface Solution {
+  details: ReactNode;
   title: string;
   description: string;
   imageUrl: string;

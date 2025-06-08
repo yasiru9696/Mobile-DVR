@@ -50,6 +50,10 @@ const ContactSection: React.FC = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="mb-4">Get in <span className="text-primary-500">Touch</span></h2>
+            <h3 className="mb-3">Don't Wait for an Incident to Happen. </h3>
+            <p className="text-gray-300 text-lg mb-8">
+              A modern Mobile DVR with AI is the single best investment you can make for your safety and your business. Protect yourself from false claims, prevent accidents, and drive with confidence.
+            </p>
             <p className="text-gray-300 text-lg mb-8">
               Ready to enhance your fleet security? Contact us today for a personalized consultation and demonstration.
             </p>

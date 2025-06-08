@@ -1,14 +1,83 @@
-import React from 'react';
+import React, { useState } from 'react';
+import mobile from '/img/mobile.jpg';
+import Sleep from '/img/Sleep.jpg';
+import Belt from '/img/Belt.jpg';
+import Smoke from '/img/Smoke.jpg';
+import Distraction from '/img/Distraction.jpg';
+import HWM from '/img/HWM.jpg';
+import FCW from '/img/FCW.jpg';
+import LD from '/img/LD.jpg';
+import PCW from '/img/PCW.jpg';
+import Brake from '/img/Brake.png';
 
-const benefits = [
-  "Increased safety and security",
-  "Reduced operational costs",
-  "Improved driver behavior",
-  "Enhanced fleet management",
-  "Protection against false claims"
+// Added videoId to each detail object
+const adasDetails = [
+  { text: "Headway Monitoring Warning (HMW): Detects if your vehicle is following the vehicle in front too closely.", imageUrl: HWM, videoId: "dQw4w9WgXcQ" },
+  { text: "Forward Collision Warning (FCW): Alerts the driver to potential front-end collisions.", imageUrl: FCW, videoId: "dQw4w9WgXcQ" },
+  { text: "Lane Departure Warning (LDW): Warns the driver if the vehicle drifts out of its lane unintentionally.", imageUrl: LD, videoId: "dQw4w9WgXcQ" },
+  { text: "Pedestrian Collision Warning (PCW): Detects pedestrians and warns the driver of potential impacts.", imageUrl: PCW, videoId: "dQw4w9WgXcQ" },
+  { text: "Sudden Brake Detection (SBD): Warns the driver when a vehicle ahead brakes suddenly, system uses sensors to monitor traffic conditions and provides an immediate warning if rapid deceleration is detected", imageUrl: Brake, videoId: "dQw4w9WgXcQ" },
+];
+
+const dmsDetails = [
+  { text: "Phone Detection: Identifies if the driver is using a mobile phone while driving.", imageUrl: mobile, videoId: "dQw4w9WgXcQ" },
+  { text: "Seatbelt Detection: Checks if the driver is wearing their seatbelt.", imageUrl: Belt, videoId: "dQw4w9WgXcQ" },
+  { text: "Smoking Detection: Detects if the driver is smoking.", imageUrl: Smoke, videoId: "dQw4w9WgXcQ" },
+  { text: "Sleep Detection: Monitors the driver for signs of drowsiness or fatigue.", imageUrl: Sleep, videoId: "dQw4w9WgXcQ" },
+  { text: "Distraction Detection: Identifies general signs of driver distraction.", imageUrl: Distraction, videoId: "dQw4w9WgXcQ" },
 ];
 
 const BenefitsSection: React.FC = () => {
+  const [activeTab, setActiveTab] = useState('ADAS');
+  const [showModal, setShowModal] = useState(false);
+  const [currentVideoId, setCurrentVideoId] = useState('');
+
+  const openVideoModal = (videoId: string) => {
+    setCurrentVideoId(videoId);
+    setShowModal(true);
+  };
+
+  const closeVideoModal = () => {
+    setShowModal(false);
+    setCurrentVideoId('');
+  };
+
+  const renderDetails = () => {
+    const details = activeTab === 'ADAS' ? adasDetails : dmsDetails;
+    // Group details into pairs
+    const pairedDetails = [];
+    for (let i = 0; i < details.length; i += 2) {
+      pairedDetails.push(details.slice(i, i + 2));
+    }
+
+    return (
+      <div className="flex flex-col space-y-6">
+        <div className="flex flex-col">
+          <h3 className="text-white font-bold mb-2">{activeTab === 'ADAS' ? 'Your Extra Set of Eyes on the Road' : 'Driver Monitoring Insights'}</h3>
+          <p className="text-gray-300 mb-4">{activeTab === 'ADAS' ? 'ADAS uses a forward-facing camera to identify potential dangers, giving you crucial warnings to avoid collisions.' : 'DMS ensures driver attentiveness and compliance with safety protocols.'}</p>
+        </div>
+        {pairedDetails.map((pair, rowIndex) => (
+          <div key={rowIndex} className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {pair.map((detail, index) => (
+              <div key={index} className="flex items-center space-x-4">
+                <img src={detail.imageUrl} alt={detail.text} className="w-40 h-40 flex-shrink-0" />
+                <div className="flex-1">
+                  <p className="text-gray-300">{detail.text}</p>
+                  <button
+                    className="mt-2 px-4 py-1 bg-primary-500 text-white rounded hover:bg-primary-600"
+                    onClick={() => openVideoModal(detail.videoId)}
+                  >
+                    Preview Video
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+        ))}
+      </div>
+    );
+  };
+
   return (
     <section id="benefits" className="section bg-dark-900">
       <div className="container-custom">
@@ -17,20 +86,54 @@ const BenefitsSection: React.FC = () => {
             Benefits of <span className="text-primary-500">Mobile DVR</span>
           </h2>
           <p className="text-White-300 text-lg">
-            Investing in Mobile DVR technology offers a multitude of advantages for your fleet.
+            Investing in Mobile DVR technology offers a multitude of advantages for your fleet - The Future of Safety: AI-Powered Protection. They understand the road and the driver to prevent accidents before they happen.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6 max-w-4xl mx-auto">
-          {benefits.map((benefit, index) => (
-            <div key={index} className="flex items-start">
-              <svg className="w-6 h-6 text-primary-500 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-              </svg>
-              <p className="text-gray-300">{benefit}</p>
-            </div>
-          ))}
+        <div className="flex justify-center mb-6">
+          <button
+            className={`px-4 py-2 ${activeTab === 'ADAS' ? 'bg-primary-500 text-white' : 'bg-gray-300 text-black'} rounded-l`}
+            onClick={() => setActiveTab('ADAS')}
+          >
+            ADAS (Road Monitoring)
+          </button>
+          <button
+            className={`px-4 py-2 ${activeTab === 'DMS' ? 'bg-primary-500 text-white' : 'bg-gray-300 text-black'} rounded-r`}
+            onClick={() => setActiveTab('DMS')}
+          >
+            DMS (Driver Monitoring)
+          </button>
         </div>
+
+        <div className="grid grid-cols-1 max-w-6xl mx-auto">
+          {renderDetails()}
+        </div>
+
+        {showModal && (
+          <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+            <div className="bg-white rounded-lg p-6 w-full max-w-2xl">
+              <div className="flex justify-between items-center mb-4">
+                <h3 className="text-lg font-bold">Video Preview</h3>
+                <button
+                  className="text-gray-600 hover:text-gray-800"
+                  onClick={closeVideoModal}
+                >
+                  ✕
+                </button>
+              </div>
+              <div className="relative" style={{ padding: '56.25% 0 0 0' }}>
+                <iframe
+                  className="absolute top-0 left-0 w-full h-full"
+                  src={`https://www.youtube.com/embed/${currentVideoId}`}
+                  title="Video Preview"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );

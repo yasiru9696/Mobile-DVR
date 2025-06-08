@@ -11,7 +11,7 @@ const HeroSection: React.FC = () => {
               Advanced <span className="text-primary-500">Mobile DVR</span> Solutions for Modern Fleet Security
             </h1>
             <p className="text-lg mb-8 text-white-300 max-w-xl">
-              Comprehensive video surveillance and recording systems designed specifically for vehicles. Protect your assets, ensure driver safety, and maintain operational visibility.
+              Driving here is unpredictable. Our AI-powered Mobile DVRs don't just record what happens, they actively help you prevent accidents, providing safety and peace of mind on every journey.
             </p>
             <div className="flex flex-wrap gap-4">
               <a href="#contact" className="btn btn-primary">
