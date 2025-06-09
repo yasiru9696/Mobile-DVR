@@ -57,7 +57,7 @@ const BenefitsSection: React.FC = () => {
           <p className="text-gray-300 mb-4">{activeTab === 'ADAS' ? 'ADAS uses a forward-facing camera to identify potential dangers, giving you crucial warnings to avoid collisions.' : 'DMS ensures driver attentiveness and compliance with safety protocols.'}</p>
         </div>
         {pairedDetails.map((pair, rowIndex) => (
-          <div key={rowIndex} className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <div key={rowIndex} className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {pair.map((detail, index) => (
               <div key={index} className="flex items-center space-x-4">
                 <img src={detail.imageUrl} alt={detail.text} className={activeTab === 'ADAS' ? 'w-60 h-40 flex-shrink-0' : 'w-40 h-40 flex-shrink-0'} />
