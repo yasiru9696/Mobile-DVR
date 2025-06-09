@@ -5,7 +5,10 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
   base: '/Mobile-DVR/',
-  optimizeDeps: {
-    exclude: ['lucide-react'],
-  },
+optimizeDeps: {
+  exclude: ['lucide-react'],
+},
+build: {
+  outDir: 'dist' // or 'build' if customized
+}
 });
