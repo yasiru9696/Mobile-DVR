@@ -12,17 +12,17 @@ import Brake from '/img/Brake.png';
 
 // Added videoId to each detail object
 const adasDetails = [
-  { text: "Headway Monitoring Warning (HMW): Detects if your vehicle is following the vehicle in front too closely.", imageUrl: HWM, videoId: "dQw4w9WgXcQ" },
-  { text: "Forward Collision Warning (FCW): Alerts the driver to potential front-end collisions.", imageUrl: FCW, videoId: "dQw4w9WgXcQ" },
-  { text: "Lane Departure Warning (LDW): Warns the driver if the vehicle drifts out of its lane unintentionally.", imageUrl: LD, videoId: "dQw4w9WgXcQ" },
-  { text: "Pedestrian Collision Warning (PCW): Detects pedestrians and warns the driver of potential impacts.", imageUrl: PCW, videoId: "dQw4w9WgXcQ" },
-  { text: "Sudden Brake Detection (SBD): Warns the driver when a vehicle ahead brakes suddenly, system uses sensors to monitor traffic conditions and provides an immediate warning if rapid deceleration is detected", imageUrl: Brake, videoId: "dQw4w9WgXcQ" },
+  { text: "Headway Monitoring Warning (HMW): Detects if your vehicle is following the vehicle in front too closely.", imageUrl: HWM, videoId: "Jv7EaIFd1Es" },
+  { text: "Forward Collision Warning (FCW): Alerts the driver to potential front-end collisions.", imageUrl: FCW, videoId: "JRUCjk1AZEg" },
+  { text: "Lane Departure Warning (LDW): Warns the driver if the vehicle drifts out of its lane unintentionally.", imageUrl: LD, videoId: "erQEw-SAp0M" },
+  { text: "Pedestrian Collision Warning (PCW): Detects pedestrians and warns the driver of potential impacts.", imageUrl: PCW, videoId: "633M5EsVJ9I" },
+  { text: "Sudden Brake Detection (SBD): System uses sensors to monitor traffic conditions and provides an immediate warning if rapid deceleration is detected.", imageUrl: Brake, videoId: "yekzrKWK7k4" },
 ];
 
 const dmsDetails = [
-  { text: "Phone Detection: Identifies if the driver is using a mobile phone while driving.", imageUrl: mobile, videoId: "dQw4w9WgXcQ" },
-  { text: "Seatbelt Detection: Checks if the driver is wearing their seatbelt.", imageUrl: Belt, videoId: "dQw4w9WgXcQ" },
-  { text: "Smoking Detection: Detects if the driver is smoking.", imageUrl: Smoke, videoId: "dQw4w9WgXcQ" },
+  { text: "Phone Detection: Identifies if the driver is using a mobile phone while driving.", imageUrl: mobile, videoId: "0PCT9yNZeuo" },
+  { text: "Seatbelt Detection: Checks if the driver is wearing their seatbelt.", imageUrl: Belt, videoId: "2ocMJHVcZzA" },
+  { text: "Smoking Detection: Detects if the driver is smoking.", imageUrl: Smoke, videoId: "1VFKbIHM3Hg" },
   { text: "Sleep Detection: Monitors the driver for signs of drowsiness or fatigue.", imageUrl: Sleep, videoId: "dQw4w9WgXcQ" },
   { text: "Distraction Detection: Identifies general signs of driver distraction.", imageUrl: Distraction, videoId: "dQw4w9WgXcQ" },
 ];
@@ -111,7 +111,7 @@ const BenefitsSection: React.FC = () => {
 
         {showModal && (
           <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-            <div className="bg-white rounded-lg p-6 w-full max-w-2xl">
+            <div className="bg-black rounded-lg p-6 w-full max-w-2xl">
               <div className="flex justify-between items-center mb-4">
                 <h3 className="text-lg font-bold">Video Preview</h3>
                 <button
