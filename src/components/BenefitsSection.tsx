@@ -57,10 +57,10 @@ const BenefitsSection: React.FC = () => {
           <p className="text-gray-300 mb-4">{activeTab === 'ADAS' ? 'ADAS uses a forward-facing camera to identify potential dangers, giving you crucial warnings to avoid collisions.' : 'DMS ensures driver attentiveness and compliance with safety protocols.'}</p>
         </div>
         {pairedDetails.map((pair, rowIndex) => (
-          <div key={rowIndex} className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div key={rowIndex} className="grid grid-cols-1 md:grid-cols-2 gap-10">
             {pair.map((detail, index) => (
               <div key={index} className="flex items-center space-x-4">
-                <img src={detail.imageUrl} alt={detail.text} className="w-40 h-40 flex-shrink-0" />
+                <img src={detail.imageUrl} alt={detail.text} className={activeTab === 'ADAS' ? 'w-60 h-40 flex-shrink-0' : 'w-40 h-40 flex-shrink-0'} />
                 <div className="flex-1">
                   <p className="text-gray-300">{detail.text}</p>
                   <button
@@ -81,7 +81,7 @@ const BenefitsSection: React.FC = () => {
   return (
     <section id="benefits" className="section bg-dark-900">
       <div className="container-custom">
-        <div className="text-center max-w-3xl mx-auto mb-12">
+        <div className="text-center max-w-6xl mx-auto mb-12">
           <h2 className="mb-4">
             Benefits of <span className="text-primary-500">Mobile DVR</span>
           </h2>
@@ -92,20 +92,20 @@ const BenefitsSection: React.FC = () => {
 
         <div className="flex justify-center mb-6">
           <button
-            className={`px-4 py-2 ${activeTab === 'ADAS' ? 'bg-primary-500 text-white' : 'bg-gray-300 text-black'} rounded-l`}
+            className={`px-5 py-3 ${activeTab === 'ADAS' ? 'bg-primary-500 text-white' : 'bg-gray-300 text-black'} rounded-l`}
             onClick={() => setActiveTab('ADAS')}
           >
             ADAS (Road Monitoring)
           </button>
           <button
-            className={`px-4 py-2 ${activeTab === 'DMS' ? 'bg-primary-500 text-white' : 'bg-gray-300 text-black'} rounded-r`}
+            className={`px-5 py-3 ${activeTab === 'DMS' ? 'bg-primary-500 text-white' : 'bg-gray-300 text-black'} rounded-r`}
             onClick={() => setActiveTab('DMS')}
           >
             DMS (Driver Monitoring)
           </button>
         </div>
 
-        <div className="grid grid-cols-1 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 max-w-8xl mx-auto">
           {renderDetails()}
         </div>
 

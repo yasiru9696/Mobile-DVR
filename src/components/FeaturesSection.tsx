@@ -70,7 +70,7 @@ const getIcon = (iconName: string, className: string = "h-8 w-8 text-white") => 
 
 const FeaturesSection: React.FC = () => {
   return (
-    <section id="features" className="section bg-dark-900 relative">
+    <section id="features" className="section">
       <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-dark-900 to-transparent"></div>
       <div className="container-custom">
         <div className="text-center max-w-3xl mx-auto mb-16">

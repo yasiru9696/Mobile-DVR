@@ -46,7 +46,7 @@ const ParticleBackground: React.FC = () => {
               distance: 150,
               enable: true,
               opacity: 0.2,
-              width: 1,
+              width: 1
             },
             move: {
               direction: 'none',
