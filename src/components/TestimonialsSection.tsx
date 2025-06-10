@@ -110,11 +110,11 @@ SwiperCore.use([Navigation, Pagination, Autoplay]);
 
     const TestimonialsSection: React.FC = () => {
       return (
-        <div className="bg-dark-900 relative py-5">
+        <div className="bg-dark-900 bg-transparent relative py-5">
           <div className="container mx-auto px-4">
             <div className="text-center max-w-3xl mx-auto px-4 mb-10">
               <h2 className="text-5xl mb-4">Client <span className="text-primary-500">Testimonials</span></h2>
-              <p className="text-gray-300 text-lg">
+              <p className="text-white-300 text-lg">
                 Hear from organizations that have transformed their operations with our Mobile DVR solutions.
               </p>
             </div>
