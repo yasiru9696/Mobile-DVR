@@ -126,3 +126,12 @@
 .feature-icon-container svg {
   @apply relative z-20;
 }
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #88bf22 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #88bf22 !important;  /* your active bullet color */
+}
