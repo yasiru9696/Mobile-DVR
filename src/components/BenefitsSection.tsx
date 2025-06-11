@@ -23,8 +23,8 @@ const dmsDetails = [
   { text: "Phone Detection: Identifies if the driver is using a mobile phone while driving.", imageUrl: mobile, videoId: "0PCT9yNZeuo" },
   { text: "Seatbelt Detection: Checks if the driver is wearing their seatbelt.", imageUrl: Belt, videoId: "2ocMJHVcZzA" },
   { text: "Smoking Detection: Detects if the driver is smoking.", imageUrl: Smoke, videoId: "1VFKbIHM3Hg" },
-  { text: "Sleep Detection: Monitors the driver for signs of drowsiness or fatigue.", imageUrl: Sleep, videoId: "dQw4w9WgXcQ" },
-  { text: "Distraction Detection: Identifies general signs of driver distraction.", imageUrl: Distraction, videoId: "dQw4w9WgXcQ" },
+  { text: "Sleep Detection: Monitors the driver for signs of drowsiness or fatigue.", imageUrl: Sleep, videoId: "dLtcGTi9vNI" },
+  { text: "Distraction Detection: Identifies general signs of driver distraction.", imageUrl: Distraction, videoId: "-MpmvIauN7U" },
 ];
 
 const BenefitsSection: React.FC = () => {
