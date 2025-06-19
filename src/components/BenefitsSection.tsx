@@ -10,21 +10,21 @@ import LD from '/img/LD.jpg';
 import PCW from '/img/PCW.jpg';
 import Brake from '/img/Brake.png';
 
-// Added videoId to each detail object
+// Updated videoId for FCW to 1094598156, others are placeholders
 const adasDetails = [
-  { text: "Headway Monitoring Warning (HMW): Detects if your vehicle is following the vehicle in front too closely.", imageUrl: HWM, videoId: "Jv7EaIFd1Es" },
-  { text: "Forward Collision Warning (FCW): Alerts the driver to potential front-end collisions.", imageUrl: FCW, videoId: "JRUCjk1AZEg" },
-  { text: "Lane Departure Warning (LDW): Warns the driver if the vehicle drifts out of its lane unintentionally.", imageUrl: LD, videoId: "erQEw-SAp0M" },
-  { text: "Pedestrian Collision Warning (PCW): Detects pedestrians and warns the driver of potential impacts.", imageUrl: PCW, videoId: "633M5EsVJ9I" },
-  { text: "Sudden Brake Detection (SBD): System uses sensors to monitor traffic conditions and provides an immediate warning if rapid deceleration is detected.", imageUrl: Brake, videoId: "yekzrKWK7k4" },
+  { text: "Headway Monitoring Warning (HMW): Detects if your vehicle is following the vehicle in front too closely.", imageUrl: HWM, videoId: "1094598129" },
+  { text: "Forward Collision Warning (FCW): Alerts the driver to potential front-end collisions.", imageUrl: FCW, videoId: "1094598156" },
+  { text: "Lane Departure Warning (LDW): Warns the driver if the vehicle drifts out of its lane unintentionally.", imageUrl: LD, videoId: "1094598142" },
+  { text: "Pedestrian Collision Warning (PCW): Detects pedestrians and warns the driver of potential impacts.", imageUrl: PCW, videoId: "1094598114" },
+  { text: "Sudden Brake Detection (SBD): System uses sensors to monitor traffic conditions and provides an immediate warning if rapid deceleration is detected.", imageUrl: Brake, videoId: "1094605724" },
 ];
 
 const dmsDetails = [
-  { text: "Phone Detection: Identifies if the driver is using a mobile phone while driving.", imageUrl: mobile, videoId: "0PCT9yNZeuo" },
-  { text: "Seatbelt Detection: Checks if the driver is wearing their seatbelt.", imageUrl: Belt, videoId: "2ocMJHVcZzA" },
-  { text: "Smoking Detection: Detects if the driver is smoking.", imageUrl: Smoke, videoId: "1VFKbIHM3Hg" },
-  { text: "Sleep Detection: Monitors the driver for signs of drowsiness or fatigue.", imageUrl: Sleep, videoId: "dLtcGTi9vNI" },
-  { text: "Distraction Detection: Identifies general signs of driver distraction.", imageUrl: Distraction, videoId: "-MpmvIauN7U" },
+  { text: "Phone Detection: Identifies if the driver is using a mobile phone while driving.", imageUrl: mobile, videoId: "1094598071" },
+  { text: "Seatbelt Detection: Checks if the driver is wearing their seatbelt.", imageUrl: Belt, videoId: "1094598059" },
+  { text: "Smoking Detection: Detects if the driver is smoking.", imageUrl: Smoke, videoId: "1094598084" },
+  { text: "Sleep Detection: Monitors the driver for signs of drowsiness or fatigue.", imageUrl: Sleep, videoId: "1094598050" },
+  { text: "Distraction Detection: Identifies general signs of driver distraction.", imageUrl: Distraction, videoId: "1094598038" },
 ];
 
 const BenefitsSection: React.FC = () => {
@@ -124,10 +124,10 @@ const BenefitsSection: React.FC = () => {
               <div className="relative" style={{ padding: '56.25% 0 0 0' }}>
                 <iframe
                   className="absolute top-0 left-0 w-full h-full"
-                  src={`https://www.youtube.com/embed/${currentVideoId}`}
+                  src={`https://player.vimeo.com/video/${currentVideoId}`}
                   title="Video Preview"
                   frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
                   allowFullScreen
                 ></iframe>
               </div>

@@ -144,16 +144,16 @@ SwiperCore.use([Navigation, Pagination, Autoplay]);
       const partnerLogos = [
         { name: "Company 1", imageUrl: ins },
         { name: "Company 2", imageUrl: cmc },
-        { name: "Company 3", imageUrl: Lan },
+       // { name: "Company 3", imageUrl: Lan },
         { name: "Company 4", imageUrl: EFL },
         { name: "Company 5", imageUrl: O2 },
         { name: "Company 6", imageUrl: mb },
-        { name: "Company 7", imageUrl: Fer },
+       // { name: "Company 7", imageUrl: Fer },
         { name: "Company 8", imageUrl: sunmatch },
-        { name: "Company 9", imageUrl: uni },
+       // { name: "Company 9", imageUrl: uni },
         { name: "Company 10", imageUrl: inse },
-        { name: "Company 11", imageUrl: jjm },
-        { name: "Company 12", imageUrl: lanw },
+       // { name: "Company 11", imageUrl: jjm },
+       // { name: "Company 12", imageUrl: lanw },
       ];
 
       return (
