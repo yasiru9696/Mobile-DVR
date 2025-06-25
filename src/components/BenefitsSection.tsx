@@ -60,14 +60,14 @@ const BenefitsSection: React.FC = () => {
           <div key={rowIndex} className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {pair.map((detail, index) => (
               <div key={index} className="flex items-center space-x-4">
-                <img src={detail.imageUrl} alt={detail.text} className={activeTab === 'ADAS' ? 'w-60 h-40 flex-shrink-0' : 'w-40 h-40 flex-shrink-0'} />
+                <img src={detail.imageUrl} alt={detail.text} className={activeTab === 'ADAS' ? 'w-50 h-28 flex-shrink-0' : 'w-40 h-40 flex-shrink-0'} />
                 <div className="flex-1">
                   <p className="text-gray-300">{detail.text}</p>
                   <button
                     className="mt-2 px-4 py-1 bg-primary-500 text-white rounded hover:bg-primary-600"
                     onClick={() => openVideoModal(detail.videoId)}
                   >
-                    Preview Video
+                    Preview
                   </button>
                 </div>
               </div>
@@ -113,7 +113,7 @@ const BenefitsSection: React.FC = () => {
           <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
             <div className="bg-black rounded-lg p-6 w-full max-w-2xl">
               <div className="flex justify-between items-center mb-4">
-                <h3 className="text-lg font-bold">Video Preview</h3>
+                <h3 className="text-lg font-bold">Preview Video</h3>
                 <button
                   className="text-gray-600 hover:text-gray-800"
                   onClick={closeVideoModal}
