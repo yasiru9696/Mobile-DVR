@@ -41,8 +41,8 @@ const HeroSection: React.FC = () => {
           <div className="relative animate-fade-in">
             <div className="aspect-[4/3] rounded-xl overflow-hidden border border-dark-800 shadow-2xl">
               <iframe
-              src="https://www.youtube.com/embed/4V-ABipCQJM?si=jnpGFf3T9S41U2mY&autoplay=1&mute=1&controls=0&playlist=4V-ABipCQJM&loop=1&vq=hd1080"
-              title="YouTube video player"
+              src="https://player.vimeo.com/video/1096149685?autoplay=1&muted=1&controls=0&loop=1&quality=1080p"
+              title="Vimeo video player"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerPolicy="strict-origin-when-cross-origin"
