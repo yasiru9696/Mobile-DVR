@@ -16,7 +16,7 @@ const adasDetails = [
   { text: "Forward Collision Warning (FCW): Alerts the driver to potential front-end collisions.", imageUrl: FCW, videoId: "1094598156" },
   { text: "Lane Departure Warning (LDW): Warns the driver if the vehicle drifts out of its lane unintentionally.", imageUrl: LD, videoId: "1094598142" },
   { text: "Pedestrian Collision Warning (PCW): Detects pedestrians and warns the driver of potential impacts.", imageUrl: PCW, videoId: "1094598114" },
-  { text: "Sudden Brake Detection (SBD): System uses sensors to monitor traffic conditions and provides an immediate warning if rapid deceleration is detected.", imageUrl: Brake, videoId: "1094605724" },
+  { text: "Sudden Brake Detection (SBD): Provides an immediate warning if rapid Acceleration / deceleration is detected.", imageUrl: Brake, videoId: "1094605724" },
 ];
 
 const dmsDetails = [
